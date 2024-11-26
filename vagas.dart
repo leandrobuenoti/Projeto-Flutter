@@ -20,7 +20,7 @@ class VagasPage extends StatelessWidget {
         ),
         child: Column(
           children: [
-            const SizedBox(height: 20), 
+            const SizedBox(height: 20),
             Center(
               child: Image.asset(
                 'lib/images/ha_vagas.png',
@@ -50,7 +50,6 @@ class VagasPage extends StatelessWidget {
                       );
                     }
 
-                    // Lista as vagas
                     return ListView(
                       children: snapshot.data!.docs.map((vaga) {
                         return Card(
@@ -62,7 +61,7 @@ class VagasPage extends StatelessWidget {
                             ),
                             subtitle: Text("Salário R\$: ${vaga['salario']}"),
                             onTap: () {
-                              // Abre os detalhes da vaga
+
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
@@ -101,7 +100,7 @@ class DetalhesVagaPage extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          // Imagem de fundo
+
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -110,7 +109,7 @@ class DetalhesVagaPage extends StatelessWidget {
               ),
             ),
           ),
-          // Detalhes da vaga
+
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(

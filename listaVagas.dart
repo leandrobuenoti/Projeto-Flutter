@@ -31,7 +31,7 @@ class listaVagas extends StatelessWidget {
                 fit: BoxFit.contain,
               ),
             ),
-            const SizedBox(height: 20), 
+            const SizedBox(height: 20),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -53,7 +53,6 @@ class listaVagas extends StatelessWidget {
                       );
                     }
 
-                    // Lista as vagas
                     return ListView(
                       children: snapshot.data!.docs.map((vaga) {
                         return Card(

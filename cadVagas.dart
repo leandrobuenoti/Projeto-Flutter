@@ -43,7 +43,7 @@ class _cadVagasState extends State<cadVagas> {
           fit: BoxFit.cover,
         ),
       ),
-      child: SingleChildScrollView( 
+      child: SingleChildScrollView(
         child: Center(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -96,10 +96,8 @@ class _cadVagasState extends State<cadVagas> {
 
   void _cadastrar() async {
     try {
-      // Referência para a coleção "vagas" no Firestore
       CollectionReference vagas = FirebaseFirestore.instance.collection('vagas');
 
-    
       await vagas.add({
         'codigo': codigoVaga.text,
         'nome': nomeVaga.text,
@@ -111,12 +109,10 @@ class _cadVagasState extends State<cadVagas> {
         'telefone': telefoneVaga.text,
       });
 
-     
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Vaga cadastrada com sucesso!")),
       );
 
-     
       codigoVaga.clear();
       nomeVaga.clear();
       detalhesVaga.clear();
@@ -126,7 +122,6 @@ class _cadVagasState extends State<cadVagas> {
       empresaVaga.clear();
       telefoneVaga.clear();
     } catch (e) {
- 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text("Erro ao cadastrar vaga: $e")),
       );

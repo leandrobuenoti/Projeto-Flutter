@@ -41,7 +41,7 @@ class Home extends StatelessWidget {
   Widget _body(BuildContext context) {
     return Stack(
       children: [
-        // Imagem de fundo
+
         Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
@@ -50,7 +50,7 @@ class Home extends StatelessWidget {
             ),
           ),
         ),
-       
+
         Column(
           children: [
             const Spacer(),
@@ -59,7 +59,7 @@ class Home extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      _abreTela(context, const VagasPage()); // Chama a página Vagas
+                      _abreTela(context, const VagasPage());
                     },
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
@@ -67,13 +67,13 @@ class Home extends StatelessWidget {
                     ),
                     child: const Text("Acessar Vagas"),
                   ),
-                  const SizedBox(height: 40), 
+                  const SizedBox(height: 40),
                   const Textos("Leandro Bueno", Colors.indigo, 12),
                   const Textos("ver 1.01", Colors.indigo, 10),
                 ],
               ),
             ),
-            const SizedBox(height: 150), 
+            const SizedBox(height: 150),
           ],
         ),
 
